@@ -1,0 +1,119 @@
+/*******************************************************************************
+ * Program Name:          PreLab04
+ *
+ * Program Description:   This program is for testing new methods of both 
+ *                        mathematics and characters/strings from chapter 4 of
+ *                        our textbook 
+ *
+ * Program Author:        Caitlyn Lacovara
+ * 
+ * Date Created:          2/22/2020
+ *
+ * Change#        Change Date      Programmer Name        Description
+ * -------        ------------     -------------------    ---------------------
+ *******************************************************************************/
+package prelab04;
+import java.util.Scanner;
+public class Prelab04 {
+    public static void main(String[] args) {
+    
+    Scanner input = new Scanner(System.in);
+   
+    //Declare variables:
+    
+    int weekDay, int1, int2; 
+    
+    double a, b, c, d, base, power;
+    
+    char lowerCase;
+    
+    
+    //Prompt user for numerical input of week day:
+    
+    System.out.print("Please enter an integer for the day of the week (0-6): ");
+    
+    weekDay = input.nextInt(); 
+    
+    switch (weekDay % 7) {
+        case 0: System.out.println(weekDay + " is Sunday"); break; 
+        case 1: System.out.println(weekDay + " is Monday"); break;
+        case 2: System.out.println(weekDay + " is Tuesday"); break; 
+        case 3: System.out.println(weekDay + " is Wednesday"); break;
+        case 4: System.out.println(weekDay + " is Thursday"); break; 
+        case 5: System.out.println(weekDay + " is Friday"); break; 
+        case 6: System.out.println(weekDay + " is Saturday"); break;
+    }
+            
+    
+    //Prompt user for input of max and min:
+    
+    System.out.println("\n" + "Please enter two numbers for max and min:");
+    
+    a = input.nextDouble();      
+    
+    b = input.nextDouble();
+    
+    System.out.println("The maximum is: " + Math.max(a, b) + " and the minimum is " + Math.min(a,b));
+    
+    
+    //Prompt user to enter number for square root:
+    
+    System.out.println("\n" + "Please enter a number to be square rooted: ");
+    
+    c = input.nextDouble(); 
+    
+    System.out.println("The square root of " + c + " is: " + Math.sqrt(c));
+    
+    
+    //Prompt user to enter a numberical base and a numerical power:
+    
+    System.out.println("\n" + "Please enter a base: ");
+    
+    base = input.nextDouble();
+    
+    System.out.println("Please enter a power: ");
+    
+    power = input.nextDouble();
+    
+    d = Math.pow(base,power); 
+    
+    System.out.println("The base " + base + " raised to the power of " + power +  ", rounded to the nearest whole number, is " + Math.round(d));
+    
+    
+    //Prompt user to enter an integer between 1-26:
+    
+    System.out.println("\n" + "Please enter an integer between 1-26: ");
+    
+    int1 = input.nextInt(); 
+
+    char ch = (char)(96 + int1);
+    
+    System.out.println("Letter " + int1 + " is: " + ch); 
+    
+      
+    //Prompt user to enter a lower case letter: 
+    
+    System.out.println("\n" + "Please enter a lower case character: ");
+    
+    lowerCase = input.next().charAt(0);  
+    
+    System.out.println("Letter in uppercase is " + Character.toUpperCase(lowerCase));
+    
+    
+    //Prompt user to enter last name: 
+    
+    System.out.println("\n" + "Please enter your last name: ");
+    
+    String lastName = input.next(); 
+    
+    System.out.println("Please enter an adjective for Java ");
+
+    String adj = input.next(); 
+    
+    System.out.println("Here's my quote:");
+    
+    System.out.println("\t \"Programming is " + "'" + adj + "'" + " for those that work hard.\" - " + lastName + " \u263A");
+    
+    }
+    
+}
